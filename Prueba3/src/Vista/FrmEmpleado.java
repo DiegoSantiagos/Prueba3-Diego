@@ -43,15 +43,15 @@ public class FrmEmpleado extends javax.swing.JFrame {
         tabla = new javax.swing.JTable();
         txtNombre1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtNombre2 = new javax.swing.JTextField();
+        txtRut = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        txtNombre3 = new javax.swing.JTextField();
+        txtSueldo = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        txtNombre4 = new javax.swing.JTextField();
+        txtDigito = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        txtNombre5 = new javax.swing.JTextField();
+        idEspecialidad = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        txtNombre6 = new javax.swing.JTextField();
+        idComuna = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -64,7 +64,18 @@ public class FrmEmpleado extends javax.swing.JFrame {
 
         jLabel2.setText("Nombre");
 
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
+
         chkHabilitado.setText("Habilitado");
+        chkHabilitado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkHabilitadoActionPerformed(evt);
+            }
+        });
 
         btnGuardar.setText("Guardar");
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -89,11 +100,11 @@ public class FrmEmpleado extends javax.swing.JFrame {
 
             },
             new String [] {
-                "IdCargo", "Nombre", "Apellido", "Rut", "Habilitado", "Sueldo", "Especialidad"
+                "Nombre", "Apellido", "Rut", "Cargo", "Especialidad", "Sueldo", "Habilitado"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Boolean.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false, false, false, false
@@ -111,43 +122,43 @@ public class FrmEmpleado extends javax.swing.JFrame {
 
         jLabel3.setText("Apellido");
 
-        txtNombre2.setToolTipText("");
-        txtNombre2.setActionCommand("<Not Set>");
-        txtNombre2.addActionListener(new java.awt.event.ActionListener() {
+        txtRut.setToolTipText("");
+        txtRut.setActionCommand("<Not Set>");
+        txtRut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombre2ActionPerformed(evt);
+                txtRutActionPerformed(evt);
             }
         });
 
         jLabel4.setText("Rut");
 
-        txtNombre3.addActionListener(new java.awt.event.ActionListener() {
+        txtSueldo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombre3ActionPerformed(evt);
+                txtSueldoActionPerformed(evt);
             }
         });
 
         jLabel5.setText("Sueldo");
 
-        txtNombre4.addActionListener(new java.awt.event.ActionListener() {
+        txtDigito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombre4ActionPerformed(evt);
+                txtDigitoActionPerformed(evt);
             }
         });
 
         jLabel6.setText("-");
 
-        txtNombre5.addActionListener(new java.awt.event.ActionListener() {
+        idEspecialidad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombre5ActionPerformed(evt);
+                idEspecialidadActionPerformed(evt);
             }
         });
 
         jLabel7.setText("idEspecialidad");
 
-        txtNombre6.addActionListener(new java.awt.event.ActionListener() {
+        idComuna.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombre6ActionPerformed(evt);
+                idComunaActionPerformed(evt);
             }
         });
 
@@ -184,7 +195,7 @@ public class FrmEmpleado extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel7)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtNombre5, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(idEspecialidad, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(2, 2, 2)))
                         .addGap(10, 10, 10)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -200,14 +211,14 @@ public class FrmEmpleado extends javax.swing.JFrame {
                                         .addComponent(jLabel8)
                                         .addGap(12, 12, 12)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtNombre6)
+                                    .addComponent(idComuna)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(txtNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtRut, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel6)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtNombre4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(txtNombre3))))
+                                        .addComponent(txtDigito, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtSueldo))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 330, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -227,20 +238,20 @@ public class FrmEmpleado extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
-                    .addComponent(txtNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNombre4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtRut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDigito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txtNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
-                    .addComponent(txtNombre3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(txtNombre5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNombre6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(idEspecialidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(idComuna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addComponent(chkHabilitado)
@@ -300,25 +311,34 @@ public class FrmEmpleado extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnGuardarActionPerformed
 
-    private void txtNombre2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre2ActionPerformed
+    private void txtRutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre2ActionPerformed
+    }//GEN-LAST:event_txtRutActionPerformed
 
-    private void txtNombre3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre3ActionPerformed
+    private void txtSueldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSueldoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre3ActionPerformed
+    }//GEN-LAST:event_txtSueldoActionPerformed
 
-    private void txtNombre4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre4ActionPerformed
+    private void txtDigitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDigitoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre4ActionPerformed
+        
+    }//GEN-LAST:event_txtDigitoActionPerformed
 
-    private void txtNombre5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre5ActionPerformed
+    private void idEspecialidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idEspecialidadActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre5ActionPerformed
+    }//GEN-LAST:event_idEspecialidadActionPerformed
 
-    private void txtNombre6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre6ActionPerformed
+    private void idComunaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idComunaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre6ActionPerformed
+    }//GEN-LAST:event_idComunaActionPerformed
+
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void chkHabilitadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkHabilitadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chkHabilitadoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -364,6 +384,8 @@ public class FrmEmpleado extends javax.swing.JFrame {
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnListar;
     private javax.swing.JCheckBox chkHabilitado;
+    private javax.swing.JTextField idComuna;
+    private javax.swing.JTextField idEspecialidad;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -374,12 +396,10 @@ public class FrmEmpleado extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabla;
+    private javax.swing.JTextField txtDigito;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtNombre1;
-    private javax.swing.JTextField txtNombre2;
-    private javax.swing.JTextField txtNombre3;
-    private javax.swing.JTextField txtNombre4;
-    private javax.swing.JTextField txtNombre5;
-    private javax.swing.JTextField txtNombre6;
+    private javax.swing.JTextField txtRut;
+    private javax.swing.JTextField txtSueldo;
     // End of variables declaration//GEN-END:variables
 }

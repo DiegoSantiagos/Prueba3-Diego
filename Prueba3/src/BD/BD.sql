@@ -61,3 +61,11 @@ CREATE TABLE Vehiculo
     FOREIGN KEY(idPersona)                    REFERENCES Persona(idPersona),
     FOREIGN KEY(idMarca)                    REFERENCES Marca(idMarca)
 );
+
+-- INSERT INTO marca (nombre) VALUES ('hyundai'); 
+-- INSERT INTO marca (nombre) VALUES ('toyota'); 
+-- INSERT INTO marca (nombre) VALUES ('chebrolet'); 
+-- INSERT INTO marca (nombre) VALUES ('audi'); 
+-- 
+-- 
+-- SELECT * FROM marca ORDER BY idMarca ASC;

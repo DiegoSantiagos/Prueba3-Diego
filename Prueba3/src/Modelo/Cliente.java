@@ -14,7 +14,13 @@ public class Cliente extends Persona {
     }
 
     public Cliente(){
-        
+        idComuna = 0;
+        rut = 0;
+        digito = "";
+        nombre = "";
+        apellido = "";
+        esCliente = false;
+        habilitado = true;
         idPersona = 0;
     }
     

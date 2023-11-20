@@ -55,7 +55,7 @@
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtNombre5" min="-2" pref="168" max="-2" attributes="0"/>
+                              <Component id="idEspecialidad" min="-2" pref="168" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -77,15 +77,15 @@
                                   </Group>
                               </Group>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtNombre6" max="32767" attributes="0"/>
+                                  <Component id="idComuna" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
-                                      <Component id="txtNombre2" min="-2" pref="142" max="-2" attributes="0"/>
+                                      <Component id="txtRut" min="-2" pref="142" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txtNombre4" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="txtDigito" min="-2" pref="20" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="txtNombre3" max="32767" attributes="0"/>
+                                  <Component id="txtSueldo" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -110,8 +110,8 @@
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtNombre2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtNombre4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtRut" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtDigito" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -119,13 +119,13 @@
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtNombre1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtNombre3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtSueldo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtNombre5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtNombre6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="idEspecialidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="idComuna" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="35" max="32767" attributes="0"/>
@@ -160,11 +160,17 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtNombre">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombreActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JCheckBox" name="chkHabilitado">
       <Properties>
         <Property name="text" type="java.lang.String" value="Habilitado"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkHabilitadoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnGuardar">
       <Properties>
@@ -203,13 +209,13 @@
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="7" rowCount="0">
-                <Column editable="false" title="IdCargo" type="java.lang.Integer"/>
                 <Column editable="false" title="Nombre" type="java.lang.String"/>
-                <Column editable="false" title="Apellido" type="java.lang.Object"/>
-                <Column editable="false" title="Rut" type="java.lang.Object"/>
+                <Column editable="false" title="Apellido" type="java.lang.String"/>
+                <Column editable="false" title="Rut" type="java.lang.String"/>
+                <Column editable="false" title="Cargo" type="java.lang.String"/>
+                <Column editable="false" title="Especialidad" type="java.lang.String"/>
+                <Column editable="false" title="Sueldo" type="java.lang.Integer"/>
                 <Column editable="false" title="Habilitado" type="java.lang.Boolean"/>
-                <Column editable="false" title="Sueldo" type="java.lang.Object"/>
-                <Column editable="false" title="Especialidad" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -265,13 +271,13 @@
         <Property name="text" type="java.lang.String" value="Apellido"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNombre2">
+    <Component class="javax.swing.JTextField" name="txtRut">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="actionCommand" type="java.lang.String" value="&lt;Not Set&gt;"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombre2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtRutActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
@@ -279,9 +285,9 @@
         <Property name="text" type="java.lang.String" value="Rut"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNombre3">
+    <Component class="javax.swing.JTextField" name="txtSueldo">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombre3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSueldoActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
@@ -289,9 +295,9 @@
         <Property name="text" type="java.lang.String" value="Sueldo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNombre4">
+    <Component class="javax.swing.JTextField" name="txtDigito">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombre4ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDigitoActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
@@ -299,9 +305,9 @@
         <Property name="text" type="java.lang.String" value="-"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNombre5">
+    <Component class="javax.swing.JTextField" name="idEspecialidad">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombre5ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="idEspecialidadActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
@@ -309,9 +315,9 @@
         <Property name="text" type="java.lang.String" value="idEspecialidad"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNombre6">
+    <Component class="javax.swing.JTextField" name="idComuna">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombre6ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="idComunaActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
