@@ -17,7 +17,13 @@ public class Empleado extends Persona {
 
     public Empleado(int idPersona, int idCargo, int sueldo, boolean habilitado, int idEspecialidad, int idComuna,
             int rut, String digito, String nombre, String apellido, boolean esCliente) {
-        super(idPersona, idComuna, rut, digito, nombre, apellido, esCliente);
+        this.idPersona= idPersona;
+        this.idComuna = idComuna;
+        this.rut = rut;
+        this.digito = digito;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.esCliente = esCliente;
         this.idCargo = idCargo;
         this.sueldo = sueldo;
         this.habilitado = habilitado;
