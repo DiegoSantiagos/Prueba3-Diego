@@ -4,8 +4,7 @@ public class Empleado extends Persona {
 
     private int idCargo;
     private int sueldo;
-    boolean habilitado;
-    int idEspecialidad;
+    private int idEspecialidad;
 
     public Empleado() {
         super();
@@ -56,14 +55,6 @@ public class Empleado extends Persona {
 
     public void setIdEspecialidad(int idEspecialidad) {
         this.idEspecialidad = idEspecialidad;
-    }
-
-    public boolean isHabilitado() {
-        return habilitado;
-    }
-
-    public void setHabilitado(boolean habilitado) {
-        this.habilitado = habilitado;
     }
 
     @Override

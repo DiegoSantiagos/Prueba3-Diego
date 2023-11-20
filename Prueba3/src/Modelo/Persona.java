@@ -8,6 +8,7 @@ public abstract class Persona {
     String nombre;
     String apellido;
     boolean esCliente;
+    boolean habilitado;
     
 
     public Persona() {
@@ -18,7 +19,7 @@ public abstract class Persona {
         this.nombre = "";
         this.apellido = "";
         this.esCliente = false;
-        this.habilitado = false;
+        this.habilitado = true;
     }
 
     public Persona(int idPersona, int idComuna, int rut, String digito, String nombre, String apellido, boolean esCliente, boolean habilitado) {
@@ -56,7 +57,11 @@ public abstract class Persona {
     }
 
     public void setRut(int rut) {
-        this.rut = rut;
+        if (rut.length() > 7 && rut.length() < 8){
+            this.rut = rut;
+        } else {
+            System.out.println('rut no valido');
+        }
     }
 
     public String getDigito() {
@@ -64,9 +69,12 @@ public abstract class Persona {
     }
 
     public void setDigito(String digito) {
-        this.digito = digito;
+        if (digito.length() == 1 && digito.matches("[0-9Kk]")) {
+            this.digito = digito;
+        } else {
+            this.digito = "";
+        }
     }
-
     public String getNombre() {
         return nombre;
     }
@@ -92,6 +100,14 @@ public abstract class Persona {
         this.esCliente = esCliente;
     }
     
+    public boolean isHabilitado() {
+        return habilitado;
+    }
+
+    public void setHabilitado(boolean habilitado) {
+        this.habilitado = habilitado;
+    }
+    
     @Override
     public String toString() {
         return "Persona{" + "idPersona=" + idPersona +
@@ -112,6 +128,6 @@ public abstract class Persona {
         this.nombre = "";
         this.apellido = "";
         this.esCliente = false;
-        this.habilitado = false;
+        this.habilitado = true;
     }
 }
