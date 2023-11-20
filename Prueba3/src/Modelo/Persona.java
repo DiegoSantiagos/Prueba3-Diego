@@ -2,7 +2,6 @@ package Modelo;
 
 public abstract class Persona {
     int idPersona;
-    
     int idComuna;
     int rut;
     String digito;
@@ -13,7 +12,6 @@ public abstract class Persona {
 
     public Persona() {
         this.idPersona = 0;
-        this.idEspecialidad = 0;
         this.idComuna = 0;
         this.rut = 0;
         this.digito = "";
@@ -23,9 +21,8 @@ public abstract class Persona {
         this.habilitado = false;
     }
 
-    public Persona(int idPersona, int idEspecialidad, int idComuna, int rut, String digito, String nombre, String apellido, boolean esCliente, boolean habilitado) {
+    public Persona(int idPersona, int idComuna, int rut, String digito, String nombre, String apellido, boolean esCliente, boolean habilitado) {
         this.idPersona = idPersona;
-        this.idEspecialidad = idEspecialidad;
         this.idComuna = idComuna;
         this.rut = rut;
         this.digito = digito;
@@ -98,7 +95,6 @@ public abstract class Persona {
     @Override
     public String toString() {
         return "Persona{" + "idPersona=" + idPersona +
-                ", idEspecialidad=" + idEspecialidad +
                 ", idComuna=" + idComuna +
                 ", rut=" + rut +
                 ", digito=" + digito +
@@ -110,7 +106,6 @@ public abstract class Persona {
     
     public void limpiar(){
         this.idPersona = 0;
-        this.idEspecialidad = 0;
         this.idComuna = 0;
         this.rut = 0;
         this.digito = "";
