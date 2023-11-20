@@ -1,7 +1,7 @@
 package Modelo;
 
 public abstract class Persona {
-    int idPersona;
+
     int idComuna;
     int rut;
     String digito;
@@ -12,7 +12,6 @@ public abstract class Persona {
     
 
     public Persona() {
-        this.idPersona = 0;
         this.idComuna = 0;
         this.rut = 0;
         this.digito = "";
@@ -22,8 +21,7 @@ public abstract class Persona {
         this.habilitado = true;
     }
 
-    public Persona(int idPersona, int idComuna, int rut, String digito, String nombre, String apellido, boolean esCliente, boolean habilitado) {
-        this.idPersona = idPersona;
+    public Persona(int idComuna, int rut, String digito, String nombre, String apellido, boolean esCliente, boolean habilitado) {
         this.idComuna = idComuna;
         this.rut = rut;
         this.digito = digito;
@@ -32,17 +30,6 @@ public abstract class Persona {
         this.esCliente = esCliente;
         this.habilitado = habilitado;
     }
-
-
-    public int getIdPersona() {
-        return idPersona;
-    }
-
-    public void setIdPersona(int idPersona) {
-        this.idPersona = idPersona;
-    }
-
-
 
     public int getIdComuna() {
         return idComuna;
@@ -57,10 +44,10 @@ public abstract class Persona {
     }
 
     public void setRut(int rut) {
-        if (rut.length() > 7 && rut.length() < 8){
+        if (rut >= 3000000 && rut <= 9999999 ){
             this.rut = rut;
         } else {
-            System.out.println('rut no valido');
+            System.out.println("rut no valido");
         }
     }
 
@@ -110,7 +97,7 @@ public abstract class Persona {
     
     @Override
     public String toString() {
-        return "Persona{" + "idPersona=" + idPersona +
+        return "Persona{" +
                 ", idComuna=" + idComuna +
                 ", rut=" + rut +
                 ", digito=" + digito +
@@ -121,7 +108,6 @@ public abstract class Persona {
     }
     
     public void limpiar(){
-        this.idPersona = 0;
         this.idComuna = 0;
         this.rut = 0;
         this.digito = "";

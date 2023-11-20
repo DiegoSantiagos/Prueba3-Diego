@@ -14,9 +14,8 @@ public class Empleado extends Persona {
         this.idEspecialidad = 0;
     }
 
-    public Empleado(int idPersona, int idCargo, int sueldo, boolean habilitado, int idEspecialidad, int idComuna,
+    public Empleado( int idCargo, int sueldo, boolean habilitado, int idEspecialidad, int idComuna,
             int rut, String digito, String nombre, String apellido, boolean esCliente) {
-        this.idPersona= idPersona;
         this.idComuna = idComuna;
         this.rut = rut;
         this.digito = digito;
@@ -59,7 +58,7 @@ public class Empleado extends Persona {
 
     @Override
     public String toString() {
-        return "Persona{" + "idPersona=" + idPersona +
+        return "Persona{" +
                 ", idCargo=" + idCargo +
                 ", idEspecialidad=" + idEspecialidad +
                 ", idComuna=" + idComuna +
@@ -74,7 +73,6 @@ public class Empleado extends Persona {
 
     @Override
     public void limpiar() {
-        this.idPersona = 0;
         this.idCargo = 0;
         this.idEspecialidad = 0;
         this.idComuna = 0;
