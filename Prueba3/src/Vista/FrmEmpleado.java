@@ -6,7 +6,7 @@
 package Vista;
 
 import Controlador.ControladorMarca;
-import Modelo.Vehiculo;
+import Modelo.Empleado;
 import javax.swing.JOptionPane;
 
 /**
@@ -311,7 +311,7 @@ public class FrmEmpleado extends javax.swing.JFrame {
         }
         else
         {   // guardar a la base de datos si están toda la información
-            Vehiculo marca = new Vehiculo();
+            Vehiculo marca = new Empleado();
             marca.setNombre(txtNombre.getText().trim().toUpperCase());
             marca.setHabilitado(chkHabilitado.isSelected());
             

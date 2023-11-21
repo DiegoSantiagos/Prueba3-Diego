@@ -1,7 +1,7 @@
 package Controlador;
 
 import BD.Conexion;
-import Modelo.Vehiculo;
+import Modelo.Empleado;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,13 +10,13 @@ import java.util.ArrayList;
 
 public class ControladorEmpleado {
     
-    public boolean agregar(Vehiculo marca)
+    public boolean agregar(Empleado marca)
     {
         try{
             Conexion con = new Conexion();
             Connection cx = con.obtenerConexion();
 
-            String sql = "INSERT INTO MARCA (NOMBRE, HABILITADO) VALUES (?,?)";
+            String sql = "INSERT INTO persona (idcargo, idespecialidad, idComuna, rut, digito, nombre, apellido, sueldo, esCliente) VALUES (?,?,?,?,?,?,?,?,Falce,?)";
             PreparedStatement st;
 
             st = cx.prepareStatement(sql);
@@ -33,13 +33,13 @@ public class ControladorEmpleado {
         }
         return false;
     }
-    public boolean actualizar(Vehiculo marca)
+    public boolean actualizar(Empleado marca)
     {
         try{
             Conexion con = new Conexion();
             Connection cx = con.obtenerConexion();
 
-            String sql = "UPDATE MARCA SET NOMBRE = ?, HABILITADO = ? WHERE ID = ?";
+            String sql = "UPDATE MARCA SET idcargo = ? idespecialidad = ? idComuna = ? rut = ? digito = ? nombre = ? apellido = ? sueldo = ? esCliente= ? ";
             PreparedStatement st;
 
             st = cx.prepareStatement(sql);
@@ -79,7 +79,7 @@ public class ControladorEmpleado {
         }
         return false;
     }
-    public Vehiculo buscarPorId(int id)
+    public Empleado buscarPorId(int id)
     {
         try{
             Conexion con = new Conexion();
@@ -95,7 +95,7 @@ public class ControladorEmpleado {
             
             if(rs.next())
             {
-                Vehiculo marca = new Vehiculo();
+                Empleado marca = new Empleado();
                 marca.setId(rs.getInt("ID"));
                 marca.setNombre(rs.getString("NOMBRE"));
                 marca.setHabilitado(rs.getBoolean("HABILITADO"));
@@ -110,9 +110,9 @@ public class ControladorEmpleado {
         }
         return null;
     }
-    public ArrayList<Vehiculo> buscarTodos()
+    public ArrayList<Empleado> buscarTodos()
     {
-        ArrayList<Vehiculo> listado = new ArrayList<Vehiculo>();
+        ArrayList<Empleado> listado = new ArrayList<Empleado>();
         try{
             Conexion con = new Conexion();
             Connection cx = con.obtenerConexion();
@@ -125,7 +125,7 @@ public class ControladorEmpleado {
             
             while(rs.next())
             {
-                Vehiculo marca = new Vehiculo();
+                Empleado marca = new Empleado();
                 marca.setId(rs.getInt("ID"));
                 marca.setNombre(rs.getString("NOMBRE"));
                 marca.setHabilitado(rs.getBoolean("HABILITADO"));
