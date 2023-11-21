@@ -142,6 +142,11 @@ public class FrmEmpleado extends javax.swing.JFrame {
                 txtSueldoActionPerformed(evt);
             }
         });
+        txtSueldo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtSueldoKeyTyped(evt);
+            }
+        });
 
         jLabel5.setText("Sueldo");
 
@@ -200,7 +205,7 @@ public class FrmEmpleado extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
+                        .addGap(77, 77, 77)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3)
@@ -215,7 +220,7 @@ public class FrmEmpleado extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(idEspecialidad, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(2, 2, 2)))
-                        .addGap(10, 10, 10)
+                        .addGap(90, 90, 90)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(chkHabilitado)
                             .addGroup(layout.createSequentialGroup()
@@ -237,7 +242,7 @@ public class FrmEmpleado extends javax.swing.JFrame {
                                         .addComponent(txtDigito, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(txtSueldo)
                                     .addComponent(idComuna))))
-                        .addGap(330, 330, 330))
+                        .addGap(120, 120, 120))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1)))
@@ -371,10 +376,17 @@ public class FrmEmpleado extends javax.swing.JFrame {
 
     private void txtRutKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRutKeyTyped
         // TODO add your handling code here:
-        if(txtRut.getText().length() == 1 && txtRut.getText().matches("^[0-9kK]+$")){
+        if(txtRut.getText().length() >= 9){
             evt.consume(); 
         }       
     }//GEN-LAST:event_txtRutKeyTyped
+
+    private void txtSueldoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSueldoKeyTyped
+        // TODO add your handling code here:
+        if(txtSueldo.getText().length() <=7){
+            evt.consume(); 
+        }
+    }//GEN-LAST:event_txtSueldoKeyTyped
 
     /**
      * @param args the command line arguments
