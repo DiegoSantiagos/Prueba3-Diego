@@ -10,7 +10,6 @@ public class Empleado extends Persona {
         super();
         this.idCargo = 0;
         this.sueldo = 0;
-        this.habilitado = false;
         this.idEspecialidad = 0;
     }
 

@@ -129,6 +129,11 @@ public class FrmEmpleado extends javax.swing.JFrame {
                 txtRutActionPerformed(evt);
             }
         });
+        txtRut.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtRutKeyTyped(evt);
+            }
+        });
 
         jLabel4.setText("Rut");
 
@@ -140,9 +145,22 @@ public class FrmEmpleado extends javax.swing.JFrame {
 
         jLabel5.setText("Sueldo");
 
+        txtDigito.setName(""); // NOI18N
+        txtDigito.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                txtDigitoInputMethodTextChanged(evt);
+            }
+        });
         txtDigito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDigitoActionPerformed(evt);
+            }
+        });
+        txtDigito.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDigitoKeyTyped(evt);
             }
         });
 
@@ -211,15 +229,15 @@ public class FrmEmpleado extends javax.swing.JFrame {
                                         .addComponent(jLabel8)
                                         .addGap(12, 12, 12)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(idComuna)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(txtRut, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel6)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtDigito, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(txtSueldo))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 330, Short.MAX_VALUE))
+                                        .addComponent(txtDigito, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtSueldo)
+                                    .addComponent(idComuna))))
+                        .addGap(330, 330, 330))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1)))
@@ -339,6 +357,24 @@ public class FrmEmpleado extends javax.swing.JFrame {
     private void chkHabilitadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkHabilitadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_chkHabilitadoActionPerformed
+
+    private void txtDigitoInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_txtDigitoInputMethodTextChanged
+        
+    }//GEN-LAST:event_txtDigitoInputMethodTextChanged
+
+    private void txtDigitoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDigitoKeyTyped
+        // TODO add your handling code here:
+        if(txtDigito.getText().length() == 1 && txtDigito.getText().matches("^[0-9kK]+$")){
+            evt.consume(); 
+        }
+    }//GEN-LAST:event_txtDigitoKeyTyped
+
+    private void txtRutKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRutKeyTyped
+        // TODO add your handling code here:
+        if(txtRut.getText().length() == 1 && txtRut.getText().matches("^[0-9kK]+$")){
+            evt.consume(); 
+        }       
+    }//GEN-LAST:event_txtRutKeyTyped
 
     /**
      * @param args the command line arguments
