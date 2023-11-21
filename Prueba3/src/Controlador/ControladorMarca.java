@@ -1,6 +1,7 @@
 package Controlador;
 
 import BD.Conexion;
+import Modelo.Empleado;
 import Modelo.Vehiculo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 
 public class ControladorMarca {
     
-    public boolean agregar(Vehiculo marca)
+    public boolean agregar(Empleado persona)
     {
         try{
             Conexion con = new Conexion();
@@ -20,8 +21,8 @@ public class ControladorMarca {
             PreparedStatement st;
 
             st = cx.prepareStatement(sql);
-            st.setString(1, marca.getNombre());
-            st.setBoolean(2, marca.isHabilitado());
+            st.setString(1, persona.getNombre());
+            st.setBoolean(2, persona.isHabilitado());
             
             st.executeUpdate();
             st.close(); // cierra declaración

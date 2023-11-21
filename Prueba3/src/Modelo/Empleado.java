@@ -1,5 +1,7 @@
 package Modelo;
 
+import javax.swing.JTextField;
+
 public class Empleado extends Persona {
 
     private int idCargo;

@@ -61,7 +61,7 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="idEspecialidad" min="-2" pref="168" max="-2" attributes="0"/>
+                                      <Component id="txtIdEspecialidad" min="-2" pref="168" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -88,7 +88,7 @@
                                       <Component id="txtDigito" min="-2" pref="28" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="txtSueldo" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="idComuna" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtIdComuna" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -123,8 +123,8 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="idEspecialidad" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="idComuna" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtIdEspecialidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtIdComuna" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="67" max="32767" attributes="0"/>
@@ -310,9 +310,9 @@
         <Property name="text" type="java.lang.String" value="-"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="idEspecialidad">
+    <Component class="javax.swing.JTextField" name="txtIdEspecialidad">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="idEspecialidadActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtIdEspecialidadActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
@@ -320,9 +320,9 @@
         <Property name="text" type="java.lang.String" value="idEspecialidad"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="idComuna">
+    <Component class="javax.swing.JTextField" name="txtIdComuna">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="idComunaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtIdComunaActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">

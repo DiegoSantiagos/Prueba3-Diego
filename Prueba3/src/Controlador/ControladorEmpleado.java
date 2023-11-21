@@ -39,13 +39,13 @@ public class ControladorEmpleado {
             Conexion con = new Conexion();
             Connection cx = con.obtenerConexion();
 
-            String sql = "UPDATE MARCA SET idcargo = ? idespecialidad = ? idComuna = ? rut = ? digito = ? nombre = ? apellido = ? sueldo = ? esCliente= ? ";
+            String sql = "UPDATE MARCA SET idcargo = ? idespecialidad = ? idComuna = ? rut = ? digito = ? nombre = ? apellido = ? sueldo = ? ";
             PreparedStatement st;
 
             st = cx.prepareStatement(sql);
             st.setString(1, marca.getNombre());
             st.setBoolean(2, marca.isHabilitado());
-            st.setInt(3, marca.getId());
+            st.setInt(3, marca.getIdEspecialidad());
             
             st.executeUpdate();
             st.close(); // cierra declaración
