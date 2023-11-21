@@ -311,7 +311,7 @@ public class FrmEmpleado extends javax.swing.JFrame {
         }
         else
         {   // guardar a la base de datos si están toda la información
-            Vehiculo marca = new Empleado();
+            Empleado marca = new Empleado();
             marca.setNombre(txtNombre.getText().trim().toUpperCase());
             marca.setHabilitado(chkHabilitado.isSelected());
             
