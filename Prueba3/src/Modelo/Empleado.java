@@ -15,17 +15,11 @@ public class Empleado extends Persona {
         this.idEspecialidad = 0;
     }
 
-    public Empleado( int idCargo, int sueldo, boolean habilitado, int idEspecialidad, int idComuna,
-            int rut, String digito, String nombre, String apellido, boolean esCliente) {
-        this.idComuna = idComuna;
-        this.rut = rut;
-        this.digito = digito;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.esCliente = esCliente;
+    public Empleado(int idCargo, int sueldo, int idEspecialidad, int idComuna, int rut, String digito, String nombre,
+            String apellido, boolean esCliente, boolean habilitado) {
+        super(idComuna, rut, digito, nombre, apellido, esCliente, habilitado);
         this.idCargo = idCargo;
         this.sueldo = sueldo;
-        this.habilitado = habilitado;
         this.idEspecialidad = idEspecialidad;
     }
 
@@ -87,10 +81,12 @@ public class Empleado extends Persona {
     }
 
     public void setIdPersona(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from
+                                                                       // nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getIdPersona() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from
+                                                                       // nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
