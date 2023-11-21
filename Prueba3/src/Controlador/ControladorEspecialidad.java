@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class ControladorMarca {
+public class ControladorEspecialidad {
     public static ArrayList<String> getMarcas() {
         ArrayList<String> marcas = new ArrayList<>();
         Connection con = null;
